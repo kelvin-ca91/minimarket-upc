@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -12,8 +13,157 @@
         android:id="@+id/custom_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingClass" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Content   -->
+    <LinearLayout
+        android:id="@+id/contentPicture"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#C9DFD6"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/custom_toolbar"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/coca_cola" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/contentPicture"
+        android:layout_margin="20dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/layoutTitle"
+            >
+            <TextView
+                android:id="@+id/labelTitle"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal"
+                android:text="Coca cola 600ml"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/labelPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio:"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/labelPriceValue"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/ 10.00"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cantidad"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            >
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#DC3545"
+                android:text="-"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="10dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="2"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle_background"
+                android:padding="8dp"/>
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#0D6EFD"
+                android:text="+"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:shape="oval"
+                android:layout_margin="10dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            >
+            <Button
+                android:id="@+id/full_width_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar al carrito"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2F7556"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#fff"
+                android:textColor="@color/black"
+                android:text="Cancelar"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
