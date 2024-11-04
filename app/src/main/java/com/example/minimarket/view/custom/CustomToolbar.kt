@@ -1,10 +1,11 @@
-package com.example.minimarket
+package com.example.minimarket.view.custom
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.minimarket.R
 
 class CustomToolbar @JvmOverloads constructor(
     context: Context,

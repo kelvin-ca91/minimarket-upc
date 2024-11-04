@@ -13,10 +13,10 @@
         android:theme="@style/Theme.MiniMarket"
         tools:targetApi="31">
         <activity
-            android:name=".DetailProductActivity"
+            android:name=".view.RegisterUser"
             android:exported="false" />
         <activity
-            android:name=".PrincipalActivity"
+            android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.DetailProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PrincipalActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

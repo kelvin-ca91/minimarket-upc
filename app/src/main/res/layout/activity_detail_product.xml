@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailProductActivity">
+    tools:context=".view.DetailProductActivity">
 
     <!-- TOOLBAR   -->
-    <com.example.minimarket.CustomToolbar
+    <com.example.minimarket.view.custom.CustomToolbar
         android:id="@+id/custom_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
