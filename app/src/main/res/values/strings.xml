@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">MiniMarket</string>
+    <string name="strAppName">Mini Market</string>
+
+    <!-- Navigation Drawer -->
+    <string name="strDetail">Detalle</string>
+    <string name="strTitle">Título</string>
+    <string name="strReturn">Regresar</string>
+    <string name="strEmail">Correo Electrónico</string>
+    <string name="strPassword">Contraseña</string>
+    <string name="strLogin">Iniciar Sesión</string>
+    <string name="strDontHaveAccount">¿No tienes una cuenta?</string>
+    <string name="strCreateAccount">Crear nueva cuenta</string>
+    <string name="strForgotPassword">¿Olvidaste tu contraseña?</string>
+    <string name="strRegister">Registrarse</string>
+    <string name="strLoading">Cargando...</string>
+    <string name="strLogout">Cerrar Sesión</string>
+    <string name="strName">Nombres</string>
+    <string name="strLastNameFather">Apellido Paterno</string>
+    <string name="strLastNameMother">Apellido Materno</string>
+    <string name="strCellphone">Celular</string>
+    <string name="strAddress">Dirección</string>
+    <string name="strNewUser">Nuevo Usuario</string>
+    <string name="strRegisterUser">Registrar Usuario</string>
+    <string name="strRegisterProduct">Registrar Producto</string>
+    <string name="strRegisterCategory">Registrar Categoría</string>
+
+
+        <!-- Error Messages -->
+    <string name="strEmailFieldEmpty">El campo de correo electrónico no puede estar vacío</string>
+    <string name="strPasswordFieldEmpty">El campo de contraseña no puede estar vacío</string>
+    <string name="strEmailIncorrect">Correo Electrónico no válido</string>
+    <string name="strUserPasswordIncorrect">Usuario o contraseña incorrectos</string>
+    <string name="strPasswordIncorrect">Contraseña no válida</string>
+    <string name="strPasswordConfirm">Confirmar Contraseña</string>
+    <string name="strError">Error</string>
+    <string name="strErrorEmail">Correo Electrónico no válido</string>
+    <string name="strErrorPassword">Contraseña no válida</string>
+    <string name="strErrorLogin">Error al iniciar sesión</string>
+    <string name="strErrorRegister">Error al registrarse</string>
+    <string name="strErrorEmpty">No puede estar vacío</string>
+    <string name="strErrorPasswordMatch">Las contraseñas no coinciden</string>
+    <string name="strErrorPasswordLength">La contraseña debe tener al menos 8 caracteres</string>
+    <string name="strErrorEmailExist">El correo electrónico ya está registrado</string>
 </resources>

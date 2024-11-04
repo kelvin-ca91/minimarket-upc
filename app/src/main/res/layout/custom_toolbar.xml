@@ -13,13 +13,14 @@
         android:background="?attr/selectableItemBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:contentDescription="@string/strReturn" />
 
     <TextView
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Título"
+        android:text="@string/strTitle"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
