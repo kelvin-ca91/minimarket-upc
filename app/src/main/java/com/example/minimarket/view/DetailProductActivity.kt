@@ -1,13 +1,15 @@
-package com.example.minimarket
+package com.example.minimarket.view
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.minimarket.R
+import com.example.minimarket.view.custom.CustomToolbar
 
 class DetailProductActivity : AppCompatActivity() {
     private lateinit var customToolbar: CustomToolbar
-    private lateinit var labelCant:TextView
+    private lateinit var labelCant: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)

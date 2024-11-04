@@ -1,9 +1,10 @@
-package com.example.minimarket
+package com.example.minimarket.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.minimarket.R
 
 class PrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

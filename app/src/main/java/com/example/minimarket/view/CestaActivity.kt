@@ -1,10 +1,12 @@
-package com.example.minimarket
+package com.example.minimarket.view
 
 import com.example.minimarket.adapters.CestaAdapter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.minimarket.R
+import com.example.minimarket.view.custom.CustomToolbar
 
 class CestaActivity : AppCompatActivity() {
     private lateinit var customToolbar: CustomToolbar
