@@ -148,7 +148,7 @@
             android:layout_marginTop="20dp"
             >
             <Button
-                android:id="@+id/full_width_button"
+                android:id="@+id/btnAddToCart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Agregar al carrito"
@@ -156,6 +156,7 @@
                 android:backgroundTint="#2F7556"
                 />
             <Button
+                android:id="@+id/btnCancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#fff"

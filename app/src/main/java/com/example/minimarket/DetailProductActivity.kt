@@ -1,4 +1,5 @@
 package com.example.minimarket
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -34,6 +35,13 @@ class DetailProductActivity : AppCompatActivity() {
             if (newValue != null && newValue > 0) {
                 labelCant.setText(newValue.toString())
             }
+        }
+
+        // Agregar al carrito
+        val btnAddToCart = findViewById<Button>(R.id.btnAddToCart)
+        btnAddToCart.setOnClickListener {
+            val intent = Intent(this, CestaActivity::class.java)
+            startActivity(intent)
         }
     }
 }
