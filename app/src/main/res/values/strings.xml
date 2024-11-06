@@ -26,7 +26,7 @@
     <string name="strRegisterCategory">Registrar Categoría</string>
 
 
-        <!-- Error Messages -->
+    <!-- Error Messages -->
     <string name="strEmailFieldEmpty">El campo de correo electrónico no puede estar vacío</string>
     <string name="strPasswordFieldEmpty">El campo de contraseña no puede estar vacío</string>
     <string name="strEmailIncorrect">Correo Electrónico no válido</string>
