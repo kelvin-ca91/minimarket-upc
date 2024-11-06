@@ -26,7 +26,7 @@
         android:gravity="center">
 
         <ImageView
-            android:id="@+id/image_view"
+            android:id="@+id/imageProduct"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:src="@drawable/coca_cola" />
@@ -45,11 +45,11 @@
             android:id="@+id/layoutTitle"
             >
             <TextView
-                android:id="@+id/labelTitle"
+                android:id="@+id/titleProduct"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:gravity="center_horizontal"
-                android:text="Coca cola 600ml"
+                android:text="Title"
                 android:textSize="20dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
@@ -70,11 +70,11 @@
                 android:textStyle="bold"
                 />
             <TextView
-                android:id="@+id/labelPriceValue"
+                android:id="@+id/priceProduct"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="S/ 10.00"
+                android:text="S/ 0.00"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textSize="18dp"
@@ -162,7 +162,6 @@
                 android:backgroundTint="#fff"
                 android:textColor="@color/black"
                 android:text="Cancelar"
-
                 />
 
         </LinearLayout>
