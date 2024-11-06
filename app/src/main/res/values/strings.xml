@@ -26,7 +26,7 @@
     <string name="strRegisterCategory">Registrar Categoría</string>
 
 
-        <!-- Error Messages -->
+    <!-- Error Messages -->
     <string name="strEmailFieldEmpty">El campo de correo electrónico no puede estar vacío</string>
     <string name="strPasswordFieldEmpty">El campo de contraseña no puede estar vacío</string>
     <string name="strEmailIncorrect">Correo Electrónico no válido</string>
@@ -42,4 +42,8 @@
     <string name="strErrorPasswordMatch">Las contraseñas no coinciden</string>
     <string name="strErrorPasswordLength">La contraseña debe tener al menos 8 caracteres</string>
     <string name="strErrorEmailExist">El correo electrónico ya está registrado</string>
+    <string name="gracias">Gracias</string>
+    <string name="tu_orden_ha_sido_registrado_correctamente">Tu orden ha sido registrado correctamente</string>
+    <string name="todo">TODO</string>
+    <string name="c_digo_para_entrega_0000123">Código para entrega #0000123</string>
 </resources>
