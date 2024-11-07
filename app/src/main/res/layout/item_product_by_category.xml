@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#C9DFD6"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageProduct"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/coca_cola" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/categoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Category Title"
+        android:textSize="14sp"
+        />
+    <TextView
+        android:id="@+id/titleProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Title"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/priceProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="S/ 0.00"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+</LinearLayout>
