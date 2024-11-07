@@ -1,7 +1,9 @@
 package com.example.minimarket.view
 
+import android.content.Intent
 import com.example.minimarket.adapters.CestaAdapter
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -31,5 +33,13 @@ class CestaActivity : AppCompatActivity() {
             recyclerView.adapter?.notifyItemRemoved(position)
         }
         recyclerView.adapter = adapter
+
+
+        // Button procesar orden
+        val btnProcesarOrden = findViewById<Button>(R.id.btnProcesarOrden)
+        btnProcesarOrden.setOnClickListener {
+            val intent = Intent(this, ConfirmacionActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

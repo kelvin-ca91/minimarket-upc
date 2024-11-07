@@ -23,6 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/custom_toolbar"
         />
 
+    <!--            android:menu="@menu/bottom_nav_menu" -->
 
     <!-- Incluir el menú inferior fijo en la parte inferior de la pantalla -->
 
