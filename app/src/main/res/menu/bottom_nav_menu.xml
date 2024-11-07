@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
         <item
             android:id="@+id/menu_categorias"
             android:title="Categorías"
-            tools:ignore="HardcodedText" />
+            app:showAsAction="always"
+            />
         <item
             android:id="@+id/menu_cesta"
             android:title="Mi cesta"
-            tools:ignore="HardcodedText" />
+            app:showAsAction="always"
+            />
         <item
             android:id="@+id/menu_compras"
             android:title="Mis compras"
-            tools:ignore="HardcodedText" />
+            app:showAsAction="always" />
 
 </menu>
