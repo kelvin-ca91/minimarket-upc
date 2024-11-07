@@ -13,11 +13,19 @@
         android:theme="@style/Theme.MiniMarket"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
+            android:name=".view.MisComprasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ConfirmacionActivity"
+            android:exported="true" />
+=======
             android:name=".view.ProductsByCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".view.CategoryActivity"
             android:exported="false" />
+>>>>>>> a3e597a303ce5f964a4c4b46cde2a2a31b9341a2
         <activity
             android:name=".view.CestaActivity"
             android:exported="false" />
