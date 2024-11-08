@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MiniMarket"
         tools:targetApi="31">
         <activity
+            android:name=".ubicacionPedidoActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.ProductsByCategoryActivity"
             android:exported="false" />
         <activity
