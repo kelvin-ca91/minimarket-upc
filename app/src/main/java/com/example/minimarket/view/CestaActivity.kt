@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
+import com.example.minimarket.databinding.ActivityUbicacionPedidoBinding
 import com.example.minimarket.view.custom.CustomToolbar
 
 class CestaActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class CestaActivity : AppCompatActivity() {
 
 
         // Lista de productos
-        val items = mutableListOf("Coca cola 600ml", "Inca Kola 600ml")
+        val items = mutableListOf("Coca cola 600ml")
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -38,7 +39,7 @@ class CestaActivity : AppCompatActivity() {
         // Button procesar orden
         val btnProcesarOrden = findViewById<Button>(R.id.btnProcesarOrden)
         btnProcesarOrden.setOnClickListener {
-            val intent = Intent(this, ConfirmacionActivity::class.java)
+            val intent = Intent(this, MyOrdenActivity::class.java)
             startActivity(intent)
         }
     }

@@ -13,11 +13,17 @@
         android:theme="@style/Theme.MiniMarket"
         tools:targetApi="31">
         <activity
+            android:name=".view.MyOrdenActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.MisComprasActivity"
             android:exported="false" />
         <activity
             android:name=".view.ConfirmacionActivity"
             android:exported="true" />
+        <activity
+            android:name=".view.ubicacionPedidoActivity"
+            android:exported="false" />
         <activity
             android:name=".view.ProductsByCategoryActivity"
             android:exported="false" />
@@ -35,6 +41,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

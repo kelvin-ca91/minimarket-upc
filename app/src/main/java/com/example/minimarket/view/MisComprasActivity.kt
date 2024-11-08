@@ -55,7 +55,8 @@ class MisComprasActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.menu_categorias -> {
                     // Acción para la opción Categorías
-                    Toast.makeText(this, "Categorías seleccionadas", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, CategoryActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.menu_cesta -> {
