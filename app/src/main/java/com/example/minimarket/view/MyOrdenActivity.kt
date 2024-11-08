@@ -1,24 +1,28 @@
-package com.example.minimarket
+package com.example.minimarket.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.RadioGroup
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.minimarket.R
+import com.example.minimarket.view.custom.CustomToolbar
 
-class ubicacionPedidoActivity : AppCompatActivity() {
-
+class MyOrdenActivity : AppCompatActivity() {
     private lateinit var radioGroup: RadioGroup
     private lateinit var rbDelivery: RadioButton
     private lateinit var mapImageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ubicacion_pedido)
+        setContentView(R.layout.activity_my_orden)
+
+        val customToolbar = findViewById<CustomToolbar>(R.id.custom_toolbar)
+        customToolbar.setTitle("Mi Orden")
 
         radioGroup = findViewById(R.id.radioGroup)
         rbDelivery = findViewById(R.id.rbDelivery)
@@ -34,7 +38,12 @@ class ubicacionPedidoActivity : AppCompatActivity() {
                 mapImageView.visibility = View.GONE
             }
         }
+
+        val confirmOrder = findViewById<Button>(R.id.btnConfirmOrder)
+        confirmOrder.setOnClickListener {
+            val intent = Intent(this, ConfirmacionActivity::class.java)
+            startActivity(intent)
+        }
+
     }
-
-
 }
