@@ -19,6 +19,9 @@
             android:name=".view.ConfirmacionActivity"
             android:exported="true" />
         <activity
+            android:name=".ubicacionPedidoActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.ProductsByCategoryActivity"
             android:exported="false" />
         <activity

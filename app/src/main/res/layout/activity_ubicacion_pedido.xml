@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp">
+
+<TextView
+    android:id="@+id/titleTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Mi Orden"
+    android:textSize="20sp"
+    android:textColor="@android:color/black"
+    android:layout_gravity="center"
+    android:paddingBottom="16dp" />
+
+<RadioGroup
+    android:id="@+id/radioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/rbStorePickup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recoger en tienda"
+        android:padding="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Te notificaremos cuando esté listo, podrás recogerlo en Calle Londres #999."
+        android:textSize="14sp"
+        android:padding="8dp" />
+
+    <RadioButton
+        android:id="@+id/rbDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery"
+        android:padding="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Podemos llevarte tus productos, pero solo si te encuentras dentro de nuestra zona y si el monto es mayor a S/ 10.00."
+        android:textSize="14sp"
+        android:padding="8dp" />
+</RadioGroup>
+
+<ImageView
+    android:id="@+id/mapImageView"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:src="@drawable/googlemap"
+    android:visibility="gone"
+    android:scaleType="centerCrop"
+    android:layout_marginTop="16dp"/>
+
+<TextView
+    android:id="@+id/totalTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Total a pagar: S/ 15.00"
+    android:textSize="16sp"
+    android:layout_gravity="center"
+    android:paddingTop="16dp"/>
+
+<Button
+    android:id="@+id/confirmButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Confirmar Orden"
+    android:layout_marginTop="16dp"/>
+</LinearLayout>
