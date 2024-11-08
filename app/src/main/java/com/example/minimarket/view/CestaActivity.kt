@@ -24,7 +24,7 @@ class CestaActivity : AppCompatActivity() {
 
 
         // Lista de productos
-        val items = mutableListOf("Coca cola 600ml", "Inca Kola 600ml")
+        val items = mutableListOf("Coca cola 600ml")
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
