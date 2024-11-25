@@ -1,4 +1,4 @@
-package com.example.minimarket.view.custom
+package com.example.minimarket.ui.view.custom
 
 import android.content.Context
 import android.util.AttributeSet

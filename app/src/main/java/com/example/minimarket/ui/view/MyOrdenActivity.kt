@@ -1,4 +1,4 @@
-package com.example.minimarket.view
+package com.example.minimarket.ui.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.minimarket.R
-import com.example.minimarket.view.custom.CustomToolbar
+import com.example.minimarket.ui.view.custom.CustomToolbar
 
 class MyOrdenActivity : AppCompatActivity() {
     private lateinit var radioGroup: RadioGroup

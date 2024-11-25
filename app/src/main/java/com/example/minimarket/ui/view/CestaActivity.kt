@@ -1,7 +1,7 @@
-package com.example.minimarket.view
+package com.example.minimarket.ui.view
 
 import android.content.Intent
-import com.example.minimarket.adapters.CestaAdapter
+import com.example.minimarket.ui.adapters.CestaAdapter
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
 import com.example.minimarket.databinding.ActivityUbicacionPedidoBinding
-import com.example.minimarket.view.custom.CustomToolbar
+import com.example.minimarket.ui.view.custom.CustomToolbar
 
 class CestaActivity : AppCompatActivity() {
     private lateinit var customToolbar: CustomToolbar

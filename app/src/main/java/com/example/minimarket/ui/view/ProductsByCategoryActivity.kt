@@ -1,4 +1,4 @@
-package com.example.minimarket.view
+package com.example.minimarket.ui.view
 
 import ProductsRepository
 import android.content.Intent
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
-import com.example.minimarket.adapters.ProductAdapter
-import com.example.minimarket.view.custom.CustomToolbar
+import com.example.minimarket.ui.adapters.ProductAdapter
+import com.example.minimarket.ui.view.custom.CustomToolbar
 
 class ProductsByCategoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

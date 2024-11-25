@@ -5,9 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MyOrdenActivity">
+    tools:context=".ui.view.MyOrdenActivity">
     <!-- TOOLBAR   -->
-    <com.example.minimarket.view.custom.CustomToolbar
+    <com.example.minimarket.ui.view.custom.CustomToolbar
         android:id="@+id/custom_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

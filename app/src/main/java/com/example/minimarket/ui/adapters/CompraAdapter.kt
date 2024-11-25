@@ -1,4 +1,4 @@
-package com.example.minimarket.adapters
+package com.example.minimarket.ui.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
-import com.example.minimarket.model.Compra
+import com.example.minimarket.data.model.Compra
 
 class CompraAdapter(private val compras: List<Compra>) : RecyclerView.Adapter<CompraAdapter.CompraViewHolder>() {
 
