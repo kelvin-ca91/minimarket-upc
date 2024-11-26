@@ -1,4 +1,4 @@
-package com.example.minimarket.view
+package com.example.minimarket.ui.view
 
 import android.os.Bundle
 import android.view.View

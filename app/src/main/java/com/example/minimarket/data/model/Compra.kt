@@ -1,4 +1,4 @@
-package com.example.minimarket.model
+package com.example.minimarket.data.model
 
 data class Compra(
     val codigo: String,       // Código único de la compra (por ejemplo, "#0000123")

@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.RegisterUser">
+    tools:context=".ui.view.RegisterUser">
 
     <!-- DESIGN REGISTER USER ACTIVITY   -->
     <!-- FIELDS OF USER, TEXT: Nombres, apellido paterno, apellido materno, celular, email, password -->
 
     <!-- TOOLBAR   -->
-    <com.example.minimarket.view.custom.CustomToolbar
+    <com.example.minimarket.ui.view.custom.CustomToolbar
         android:id="@+id/custom_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

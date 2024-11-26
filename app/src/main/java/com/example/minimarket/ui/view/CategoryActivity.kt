@@ -1,4 +1,4 @@
-package com.example.minimarket.view
+package com.example.minimarket.ui.view
 
 import CategoryRepository
 import android.content.Intent
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
-import com.example.minimarket.adapters.CategoryAdapter
-import com.example.minimarket.view.custom.CustomToolbar
+import com.example.minimarket.ui.adapters.CategoryAdapter
+import com.example.minimarket.ui.view.custom.CustomToolbar
 
 class CategoryActivity : AppCompatActivity() {
 

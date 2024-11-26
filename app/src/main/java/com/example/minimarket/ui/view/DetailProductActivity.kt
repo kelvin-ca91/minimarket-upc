@@ -1,4 +1,4 @@
-package com.example.minimarket.view
+package com.example.minimarket.ui.view
 import ProductsRepository
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.minimarket.R
-import com.example.minimarket.view.custom.CustomToolbar
+import com.example.minimarket.ui.view.custom.CustomToolbar
 
 class DetailProductActivity : AppCompatActivity() {
     private lateinit var labelCant:TextView

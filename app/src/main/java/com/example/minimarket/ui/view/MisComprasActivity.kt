@@ -1,4 +1,4 @@
-package com.example.minimarket.view
+package com.example.minimarket.ui.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
-import com.example.minimarket.adapters.CompraAdapter
-import com.example.minimarket.model.Compra
-import com.example.minimarket.view.custom.CustomToolbar
+import com.example.minimarket.ui.adapters.CompraAdapter
+import com.example.minimarket.data.model.Compra
+import com.example.minimarket.ui.view.custom.CustomToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MisComprasActivity : AppCompatActivity() {

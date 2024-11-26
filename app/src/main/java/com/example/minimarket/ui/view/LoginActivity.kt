@@ -1,17 +1,25 @@
-package com.example.minimarket.view
+package com.example.minimarket.ui.view
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.minimarket.R
+import com.example.minimarket.data.model.request.LoginRequest
+import com.example.minimarket.data.repository.ClienteRepository
 import com.example.minimarket.databinding.ActivityLoginBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
+    private val clienteRepository = ClienteRepository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +61,7 @@ class LoginActivity : AppCompatActivity() {
                 passwordInputLayout.error = null
             }
 
+            /**
             //Validate username
             if (binding.textInputLayoutEmail.editText?.text.toString() == "admin") {
                 emailInputLayout.error = null
@@ -71,7 +80,9 @@ class LoginActivity : AppCompatActivity() {
 
             Log.i("LoginActivity", "Login success")
             val intent = android.content.Intent(this, PrincipalActivity::class.java)
-            startActivity(intent)
+            startActivity(intent)*/
+
+            loginUser(binding.textInputLayoutEmail.editText?.text.toString(), binding.textInputLayoutPassword.editText?.text.toString())
         }
 
         //Register: if is true, open the register user activity
@@ -81,6 +92,32 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun loginUser(email: String, password: String) {
+    val loginRequest = LoginRequest(email, password)
+    CoroutineScope(Dispatchers.IO).launch {
+        try {
+            val response = clienteRepository.loginCliente(loginRequest)
+            withContext(Dispatchers.Main) {
+                if (response.email.isNotEmpty() && response.idCliente > 0) {
+                    Log.i("LoginActivity", "Login success")
+                    Toast.makeText(this@LoginActivity, "Login success", Toast.LENGTH_SHORT).show()
+                    val intent = android.content.Intent(this@LoginActivity, PrincipalActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    Log.e("LoginActivity", "Login failed")
+                    Toast.makeText(this@LoginActivity, "No se pudo iniciar sesión", Toast.LENGTH_SHORT).show()
+                }
+            }
+        } catch (e: Exception) {
+            withContext(Dispatchers.Main) {
+                Log.e("LoginActivity", "Error: ${e.message}")
+                Toast.makeText(this@LoginActivity, "Ocurrió un error", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}
+
 
     fun logMessages() {
         Log.d("ExampleTag", "This is a debug message")

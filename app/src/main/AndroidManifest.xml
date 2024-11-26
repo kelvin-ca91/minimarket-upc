@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permission to access the internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- usesCleartextTraffic attribute is set to true for permitting cleartext traffic, as the app uses HTTP -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,33 +15,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniMarket"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".view.MyOrdenActivity"
+            android:name=".ui.view.MyOrdenActivity"
             android:exported="false" />
         <activity
-            android:name=".view.MisComprasActivity"
+            android:name=".ui.view.MisComprasActivity"
             android:exported="false" />
         <activity
-            android:name=".view.ConfirmacionActivity"
+            android:name=".ui.view.ConfirmacionActivity"
             android:exported="true" />
         <activity
-            android:name=".view.ubicacionPedidoActivity"
+            android:name=".ui.view.ubicacionPedidoActivity"
             android:exported="false" />
         <activity
-            android:name=".view.ProductsByCategoryActivity"
+            android:name=".ui.view.ProductsByCategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".view.CategoryActivity"
+            android:name=".ui.view.CategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".view.CestaActivity"
+            android:name=".ui.view.CestaActivity"
             android:exported="false" />
         <activity
-            android:name=".view.RegisterUser"
+            android:name=".ui.view.RegisterUser"
             android:exported="false" />
         <activity
-            android:name=".view.LoginActivity"
+            android:name=".ui.view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,10 +51,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.DetailProductActivity"
+            android:name=".ui.view.DetailProductActivity"
             android:exported="false" />
         <activity
-            android:name=".view.PrincipalActivity"
+            android:name=".ui.view.PrincipalActivity"
             android:exported="false" />
     </application>
 
