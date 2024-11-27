@@ -111,7 +111,7 @@ class LoginActivity : AppCompatActivity() {
             }
         } catch (e: Exception) {
             withContext(Dispatchers.Main) {
-                Log.e("LoginActivity", "Error: ${e.message}")
+                Log.e("LoginActivity", "Error: ${e.message}", e)
                 Toast.makeText(this@LoginActivity, "Ocurrió un error", Toast.LENGTH_SHORT).show()
             }
         }

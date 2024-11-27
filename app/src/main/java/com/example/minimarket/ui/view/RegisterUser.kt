@@ -109,8 +109,8 @@ class RegisterUser : AppCompatActivity() {
         val clienteRequest = ClienteRequest(
             idCliente = null,
             nombres = nombres,
-            apePaterno = apellidoPaterno,
-            apeMaterno = apellidoMaterno,
+            ape_paterno = apellidoPaterno,
+            ape_materno = apellidoMaterno,
             celular = celular,
             email = email,
             password = password
@@ -120,6 +120,7 @@ class RegisterUser : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val response = clienteRepository.registrarCliente(clienteRequest)
+                Log.d("RegisterUser", "Response: $response")
                 withContext(Dispatchers.Main) {
                     if (response.email.isNotEmpty() && response.idCliente > 0) {
                         Log.i("RegisterUser", "Registration success")
