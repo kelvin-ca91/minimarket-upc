@@ -99,7 +99,7 @@ class LoginActivity : AppCompatActivity() {
         try {
             val response = clienteRepository.loginCliente(loginRequest)
             withContext(Dispatchers.Main) {
-                if (response.email.isNotEmpty() && response.idcliente > 0) {
+                if (response.email.isNotEmpty() && response.idCliente > 0) {
                     Log.i("LoginActivity", "Login success")
                     Toast.makeText(this@LoginActivity, "Login success", Toast.LENGTH_SHORT).show()
                     val intent = android.content.Intent(this@LoginActivity, CategoryActivity::class.java)

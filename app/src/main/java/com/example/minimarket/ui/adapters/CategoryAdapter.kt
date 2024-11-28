@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.minimarket.Interfaces.ICategory
 import com.example.minimarket.R
 import com.example.minimarket.data.model.response.CategoriaResponse
+import com.example.minimarket.utils.loadImage
 
 class CategoryAdapter(
     private val categories: List<CategoriaResponse>,
@@ -28,7 +28,7 @@ class CategoryAdapter(
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = categories[position]
-        holder.image.setImageResource(category.image)
+        holder.image.loadImage(category.image)
         holder.title.text = category.nombre
 
         holder.itemView.setOnClickListener {
