@@ -1,7 +1,9 @@
 package com.example.minimarket.data.model.response
 
+import com.google.gson.annotations.SerializedName
+
 data class ClienteResponse(
-    val idcliente: Int,
+    @SerializedName("idcliente") val idCliente: Int,
     val nombres: String,
     val ape_paterno: String,
     val ape_materno: String,
