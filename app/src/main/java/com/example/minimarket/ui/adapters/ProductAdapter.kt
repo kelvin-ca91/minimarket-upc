@@ -31,7 +31,7 @@ class ProductAdapter(
         val product = products[position]
         holder.image.loadImage(product.imagen)
         holder.title.text = product.nombre
-        holder.price.text = "S/ "+product.precio.toString()
+        holder.price.text = "S/ "+product.precio
 
         holder.itemView.setOnClickListener {
             onItemClick(product)

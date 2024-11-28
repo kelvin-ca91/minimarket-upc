@@ -81,27 +81,30 @@ class MyOrdenActivity : AppCompatActivity() {
         }
     }
     private fun saveOrder(){
-        println(tipoEnvio)
-        println("rb seleccionado")
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                withContext(Dispatchers.Main) {
-                    val clientAuth = ClientManager.getClient()
-                    val newOrder = clientAuth?.let {
-                        OrderRequest(
-                            idcliente = it.id,
-                            tipoEnvio,
-                            ubicacionEntrega = "",
-                            estado = true,
-                            precioTotal = totalPrice,
-                            detalles = getDetallesFromCart()
-                        )
 
-                    }
-                    val resp = newOrder?.let { orderRepository.registrarOrden(it) }
+                val clientAuth = ClientManager.getClient()
+                val newOrder = clientAuth?.let {
+                    OrderRequest(
+                        idcliente = it.id,
+                        tipoEnvio,
+                        ubicacionEntrega = "",
+                        estado = true,
+                        precioTotal = totalPrice,
+                        detalles = getDetallesFromCart()
+                    )
+
+                }
+                val resp = newOrder?.let { orderRepository.registrarOrden(it) }
+                withContext(Dispatchers.Main) {
                     ProductManager.clearCart()
-                    val intent = Intent(this@MyOrdenActivity, ConfirmacionActivity::class.java)
-                    startActivity(intent)
+                    println(resp)
+                    if (resp?.idorden != null) {
+                        val intent = Intent(this@MyOrdenActivity, ConfirmacionActivity::class.java)
+                        intent.putExtra("COD_ORDER", resp.idorden.toString())
+                        startActivity(intent)
+                    }
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {

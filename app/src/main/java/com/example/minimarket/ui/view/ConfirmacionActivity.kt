@@ -1,6 +1,7 @@
 package com.example.minimarket.ui.view
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.minimarket.R
@@ -16,6 +17,13 @@ class ConfirmacionActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_confirmacion)
 
+        val codigoOrden = intent.getStringExtra("COD_ORDER")
+        val numeroConCeros = codigoOrden?.padStart(7, '0')
+
+        val textCodigo = findViewById<TextView>(R.id.textCodigo)
+        textCodigo.setText("#" + numeroConCeros)
+
+
         // Configurar el código de entrega (se puede obtener este valor dinámicamente)
         /*val codigoEntrega = "#0000123"
         val textCodigo = findViewById<TextView>(R.id.textCodigo)
@@ -25,11 +33,14 @@ class ConfirmacionActivity : AppCompatActivity() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.inflateMenu(R.menu.bottom_nav_menu)
 
+
+
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_categorias -> {
                     // Acción para la opción Categorías
-                    Toast.makeText(this, "Categorías seleccionadas", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, CategoryActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.menu_cesta -> {
