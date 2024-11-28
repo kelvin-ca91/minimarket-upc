@@ -4,12 +4,14 @@ import android.content.Intent
 import com.example.minimarket.ui.adapters.CestaAdapter
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
 import com.example.minimarket.databinding.ActivityUbicacionPedidoBinding
 import com.example.minimarket.ui.view.custom.CustomToolbar
+import com.example.minimarket.utils.ProductManager
 
 class CestaActivity : AppCompatActivity() {
     private lateinit var customToolbar: CustomToolbar
@@ -23,14 +25,19 @@ class CestaActivity : AppCompatActivity() {
         customToolbar = findViewById(R.id.custom_toolbar)
         customToolbar.setTitle("Mi Cesta")
 
+        val totalPriceView = findViewById<TextView>(R.id.totalPrice)
 
         // Lista de productos
-        val items = mutableListOf("Coca cola 600ml")
+        val listProducts = ProductManager.getProducts()
+
+        val totalPrice = listProducts.sumOf { it.price.toDouble() * it.cant.toInt() }
+        totalPriceView.setText("S/ "+ totalPrice)
+
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val adapter = CestaAdapter(items) { position ->
-            items.removeAt(position)
+        val adapter = CestaAdapter(listProducts) { position ->
+//            listProducts .removeAt(position)
             recyclerView.adapter?.notifyItemRemoved(position)
         }
         recyclerView.adapter = adapter

@@ -2,8 +2,10 @@ package com.example.minimarket.data.api
 
 import com.example.minimarket.data.model.request.ClienteRequest
 import com.example.minimarket.data.model.request.LoginRequest
+import com.example.minimarket.data.model.request.OrderRequest
 import com.example.minimarket.data.model.response.CategoriaResponse
 import com.example.minimarket.data.model.response.ClienteResponse
+import com.example.minimarket.data.model.response.OrderResponse
 import com.example.minimarket.data.model.response.ProductoResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -25,5 +27,6 @@ interface ApiService {
     @GET("/categorias/{idCategoria}/productos")
     suspend fun ListaProductosPorCategoria(@Path("idCategoria") idCategoria: Int): List<ProductoResponse>
 
-    /** Producto **/
+    @POST("/orden/registrar")
+    suspend fun registrarOrden(@Body orderRequest: OrderRequest): OrderResponse
 }

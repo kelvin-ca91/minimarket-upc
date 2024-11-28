@@ -39,8 +39,6 @@ class CategoryActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val listCategoryResp = categoryRepository.listCategories()
-                println("BEBIDAS")
-                println(listCategoryResp)
                 withContext(Dispatchers.Main) {
                     if (listCategoryResp.isNotEmpty()) {
                         val adapter = CategoryAdapter(listCategoryResp) { category ->

@@ -67,7 +67,7 @@
             android:layout_marginTop="16dp"/>
 
         <TextView
-            android:id="@+id/totalTextView"
+            android:id="@+id/totalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Total a pagar: S/ 15.00"
