@@ -44,6 +44,7 @@ class ProductsByCategoryActivity : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     val recyclerView =   findViewById<RecyclerView>(R.id.recyclerViewProductsByCategory)
                     recyclerView.layoutManager = GridLayoutManager(this@ProductsByCategoryActivity, 2)
+
                     println(listProductsResp)
                     val adapter = ProductAdapter(listProductsResp) { product ->
                         val intent = Intent(this@ProductsByCategoryActivity, DetailProductActivity::class.java)

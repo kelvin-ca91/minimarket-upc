@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
 import com.example.minimarket.data.model.response.ProductoResponse
+import com.example.minimarket.utils.loadImage
 
 class ProductAdapter(
     private val products: List<ProductoResponse>,
@@ -28,7 +29,7 @@ class ProductAdapter(
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = products[position]
-        holder.image.setImageResource(product.imagen.toIntOrNull()?:0)
+        holder.image.loadImage(product.imagen)
         holder.title.text = product.nombre
         holder.price.text = "S/ "+product.precio.toString()
 
