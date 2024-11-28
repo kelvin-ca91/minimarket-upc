@@ -1,15 +1,16 @@
 package com.example.minimarket.ui.adapters
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
-import com.example.minimarket.data.model.Compra
+import com.example.minimarket.data.model.response.HistoryOrderResponse
 
-class CompraAdapter(private val compras: List<Compra>) : RecyclerView.Adapter<CompraAdapter.CompraViewHolder>() {
+class CompraAdapter(
+    private val orders: List<HistoryOrderResponse>
+) : RecyclerView.Adapter<CompraAdapter.CompraViewHolder>() {
 
     inner class CompraViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textCodigo: TextView = view.findViewById(R.id.textCodigo)
@@ -24,23 +25,28 @@ class CompraAdapter(private val compras: List<Compra>) : RecyclerView.Adapter<Co
         return CompraViewHolder(view)
     }
 
-    @SuppressLint("SetTextI18n")
+
     override fun onBindViewHolder(holder: CompraViewHolder, position: Int) {
-        val compra = compras[position]
-        holder.textCodigo.text = "Código: ${compra.codigo}"
-        holder.textTipoEntrega.text = compra.tipoEntrega
-        holder.textFecha.text = "Fecha: ${compra.fecha}"
-        holder.textTotal.text = "Total: ${compra.total}"
-        holder.textEstado.text = "Estado: ${compra.estado}"
+
+        val order = orders[position]
+        val numeroConCeros = order.idorden.toString().padStart(7, '0')
+        holder.textCodigo.text = "Código: #${numeroConCeros}"
+        holder.textTipoEntrega.text = order.tipoEnvio
+        holder.textFecha.text = "Fecha: ${order.fecharegistro}"
+        holder.textTotal.text = "Total: S/${order.precioTotal}"
+        var newEstado = "Entregado"
+        if(order.estado){
+            newEstado = "Pendiente"
+        }
+        holder.textEstado.text = "Estado: ${newEstado}"
 
         // Cambia el fondo del ítem según el estado
-        val backgroundColor = when (compra.estado) {
-            "Pendiente de atención" -> R.color.white
-            "Entregado" -> R.color.purple_200
-            else -> R.color.teal_700
-        }
-        holder.itemView.setBackgroundResource(backgroundColor)
+//        val backgroundColor = when (order.estado) {
+//            true -> R.color.white
+//            false -> R.color.teal_700
+//        }
+//        holder.itemView.setBackgroundResource(backgroundColor)
     }
 
-    override fun getItemCount(): Int = compras.size
+    override fun getItemCount(): Int = orders.size
 }

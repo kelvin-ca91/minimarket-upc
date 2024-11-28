@@ -38,6 +38,7 @@ class ProductsByCategoryActivity : AppCompatActivity() {
     private fun loadProduct (){
         CoroutineScope(Dispatchers.IO).launch {
             try {
+
                 val listProductsResp = productoRepository.listProductosByCategoria(categoryId)
                 withContext(Dispatchers.Main) {
                     val recyclerView =   findViewById<RecyclerView>(R.id.recyclerViewProductsByCategory)

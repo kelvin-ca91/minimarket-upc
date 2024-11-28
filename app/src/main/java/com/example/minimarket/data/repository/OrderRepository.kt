@@ -2,6 +2,7 @@ package com.example.minimarket.data.repository
 
 import com.example.minimarket.data.api.RetrofitInstance
 import com.example.minimarket.data.model.request.OrderRequest
+import com.example.minimarket.data.model.response.HistoryOrderResponse
 import com.example.minimarket.data.model.response.OrderResponse
 
 class OrderRepository {
@@ -9,5 +10,9 @@ class OrderRepository {
 
     suspend fun registrarOrden(order: OrderRequest): OrderResponse {
         return apiService.registrarOrden(order)
+    }
+
+    suspend fun listarOrders(idCliente: Int): List<HistoryOrderResponse> {
+        return apiService.ListaOrders(idCliente)
     }
 }
