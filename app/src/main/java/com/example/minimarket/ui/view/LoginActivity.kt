@@ -8,9 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.minimarket.R
+import com.example.minimarket.data.model.Client
 import com.example.minimarket.data.model.request.LoginRequest
 import com.example.minimarket.data.repository.ClienteRepository
 import com.example.minimarket.databinding.ActivityLoginBinding
+import com.example.minimarket.utils.ClientManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -100,6 +102,8 @@ class LoginActivity : AppCompatActivity() {
             val response = clienteRepository.loginCliente(loginRequest)
             withContext(Dispatchers.Main) {
                 if (response.email.isNotEmpty() && response.idCliente > 0) {
+                    val auth = Client(response.idCliente, response.nombres, response.ape_materno+ ' '+response.ape_materno)
+                    ClientManager.setClient(auth)
                     Log.i("LoginActivity", "Login success")
                     Toast.makeText(this@LoginActivity, "Login success", Toast.LENGTH_SHORT).show()
                     val intent = android.content.Intent(this@LoginActivity, CategoryActivity::class.java)

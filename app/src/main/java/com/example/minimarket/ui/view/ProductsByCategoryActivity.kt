@@ -1,15 +1,13 @@
 package com.example.minimarket.ui.view
 
-import ProductsRepository
+
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.R
-import com.example.minimarket.data.repository.CategoriaRepository
 import com.example.minimarket.data.repository.ProductoRepository
 import com.example.minimarket.ui.adapters.ProductAdapter
 import com.example.minimarket.ui.view.custom.CustomToolbar
@@ -45,7 +43,6 @@ class ProductsByCategoryActivity : AppCompatActivity() {
                     val recyclerView =   findViewById<RecyclerView>(R.id.recyclerViewProductsByCategory)
                     recyclerView.layoutManager = GridLayoutManager(this@ProductsByCategoryActivity, 2)
 
-                    println(listProductsResp)
                     val adapter = ProductAdapter(listProductsResp) { product ->
                         val intent = Intent(this@ProductsByCategoryActivity, DetailProductActivity::class.java)
                         intent.putExtra("PRODUCT_ID", product.idproducto.toString())
