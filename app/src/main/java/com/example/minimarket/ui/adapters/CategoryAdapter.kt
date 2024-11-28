@@ -8,10 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.minimarket.Interfaces.ICategory
 import com.example.minimarket.R
+import com.example.minimarket.data.model.response.CategoriaResponse
 
 class CategoryAdapter(
-    private val categories: List<ICategory>,
-    private val onItemClick: (ICategory) -> Unit) :
+    private val categories: List<CategoriaResponse>,
+    private val onItemClick: (CategoriaResponse) -> Unit) :
     RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
     class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -27,8 +28,8 @@ class CategoryAdapter(
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = categories[position]
-        holder.image.setImageResource(category.imageResId)
-        holder.title.text = category.title
+        holder.image.setImageResource(category.image)
+        holder.title.text = category.nombre
 
         holder.itemView.setOnClickListener {
             onItemClick(category)

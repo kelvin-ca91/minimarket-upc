@@ -17,21 +17,25 @@ class DetailProductActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_product)
 
         val productId = intent.getStringExtra("PRODUCT_ID")?.toIntOrNull()?:0
-        val product = ProductsRepository.findProductById(productId)
+        val productName = intent.getStringExtra("PRODUCT_NAME")
+        val productImage = intent.getStringExtra("PRODUCT_IMAGE")
+        val productPrice = intent.getStringExtra("PRODUCT_PRICE")
+        println(productImage)
+
 
         val titleProduct = findViewById<TextView>(R.id.titleProduct)
-        titleProduct.text = product?.title
+        titleProduct.text = productName
 
         val priceProduct = findViewById<TextView>(R.id.priceProduct)
-        priceProduct.text = "S/ "+product?.price.toString()
+        priceProduct.text = "S/ "+ productPrice
 
         val imageProduct = findViewById<ImageView>(R.id.imageProduct)
-        imageProduct.setImageResource(product!!.imageResId)
+        imageProduct.setImageResource(productImage?.toIntOrNull()?:0)
 
 
         // Text toolbar
         val customToolbar = findViewById<CustomToolbar>(R.id.custom_toolbar)
-        customToolbar.setTitle(product.title)
+        customToolbar.setTitle(productName!!)
 
         // buttons add cants
         val btnAddMore = findViewById<Button>(R.id.btnAddMore)

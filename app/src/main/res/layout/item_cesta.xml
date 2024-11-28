@@ -12,7 +12,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/coca_cola" />
+        android:src="@drawable/coca_cola_600ml" />
 
     <!-- Título del producto -->
     <LinearLayout

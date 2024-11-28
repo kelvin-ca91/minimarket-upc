@@ -14,17 +14,9 @@
             android:id="@+id/imageProduct"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/coca_cola" />
+            android:src="@drawable/coca_cola_600ml" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/categoryTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Category Title"
-        android:textSize="14sp"
-        />
     <TextView
         android:id="@+id/titleProduct"
         android:layout_width="match_parent"

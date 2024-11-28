@@ -29,7 +29,7 @@
             android:id="@+id/imageProduct"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/coca_cola" />
+            android:src="@drawable/coca_cola_600ml" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

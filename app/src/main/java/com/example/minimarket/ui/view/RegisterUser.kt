@@ -122,7 +122,7 @@ class RegisterUser : AppCompatActivity() {
                 val response = clienteRepository.registrarCliente(clienteRequest)
                 Log.d("RegisterUser", "Response: $response")
                 withContext(Dispatchers.Main) {
-                    if (response.email.isNotEmpty() && response.idCliente > 0) {
+                    if (response.email.isNotEmpty() && response.idcliente > 0) {
                         Log.i("RegisterUser", "Registration success")
                         Toast.makeText(this@RegisterUser, "Registro exitoso", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this@RegisterUser, LoginActivity::class.java)

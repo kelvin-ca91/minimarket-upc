@@ -14,7 +14,7 @@
             android:id="@+id/imageCategory"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/coca_cola" />
+            android:src="@drawable/coca_cola_600ml" />
     </LinearLayout>
 
 
